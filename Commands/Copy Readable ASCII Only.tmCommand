@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(ENV['TM_BUNDLE_SUPPORT'])
+require 'string_tools'
+
+# send to clipboard
+Kernel.open("|/usr/bin/pbcopy","w") do |f|
+  f.write(STDIN.read.extract_to_readable)
+end
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@C</string>
+	<key>name</key>
+	<string>Copy Readable ASCII Only</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>9908D4EF-0077-48B4-97D9-00A8A715E190</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(ENV['TM_BUNDLE_SUPPORT'])
+$LIB_PATH = [ENV['TM_BUNDLE_SUPPORT'] + "/lib"]
+require 'string_tools'
+require 'lzh_wrapper'
+
+# determine if this is a redcarpet doc, if it is, include raw block tags
+tag = ""
+if ENV['TM_SCOPE'].include? "redcarpet"
+  tag = "```\n"
+end
+
+str = STDIN.read.extract_to_string
+print tag + LzhWrapper.encode(str).to_hexed + tag
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@D</string>
+	<key>name</key>
+	<string>LZH Compress</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>uuid</key>
+	<string>5A73C8BD-4CE4-433F-BEDA-4086B895B21D</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

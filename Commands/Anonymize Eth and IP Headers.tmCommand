@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(ENV['TM_BUNDLE_SUPPORT'])
+require 'string_tools'
+require 'array_tools'
+
+bytes = STDIN.read.extract_ary(true) # extract hex bytes
+
+# anonymize src and dst Ethernet MACs
+bytes[0..11] = [1, 2, 3, 4, 5, 6]*2
+# anonymize src and dst IP addresses
+bytes[26..33] = [1, 2, 3, 4]*2
+
+# determine if these bytes were in a redcarpet document and add 
+tag = ""
+if ENV['TM_SCOPE'].include? "redcarpet"
+  tag = "```\n"
+end
+
+print tag + bytes.to_hex.to_hexed + tag
+
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>name</key>
+	<string>Anonymize Eth and IP Headers</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>uuid</key>
+	<string>2D1A4F10-9F56-4A69-8C3B-B4278A857C60</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU
+
+require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
+require 'securerandom'
+
+lenstr = TextMate::UI.request_string(:title =&gt; 'Random Hex Stream', :prompt =&gt; 'Number of random hex bytes:', :button1 =&gt; 'OK', :button2 =&gt; 'Cancel')
+
+if lenstr != nil
+  len = lenstr.to_i
+  print SecureRandom.hex(len).upcase
+end</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@R</string>
+	<key>name</key>
+	<string>Random Hex Stream</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>atCaret</string>
+	<key>uuid</key>
+	<string>E304BC51-6876-4AB9-895C-45AB76FBFC02</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+perl -pe 's/^\n//'
+</string>
+	<key>name</key>
+	<string>Remove Blank Lines</string>
+	<key>uuid</key>
+	<string>C15B8886-F996-4E64-A19B-F79BFA3CFCD5</string>
+</dict>
+</plist>

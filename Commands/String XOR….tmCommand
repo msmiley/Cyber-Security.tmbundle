@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU
+
+require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
+$LOAD_PATH.unshift(ENV['TM_BUNDLE_SUPPORT'])
+require 'xor_tools'
+require 'array_tools'
+
+keystr = TextMate::UI.request_string(:title =&gt; 'XOR Char', :prompt =&gt; 'Enter single hex char: (0x is optional)', :button1 =&gt; 'OK', :button2 =&gt; 'Cancel')
+
+if keystr != ""
+  key = keystr.to_i(16)
+  print "\n" + XORTools.singleByteXORWithString(key, STDIN.read).to_hex
+end
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@D</string>
+	<key>name</key>
+	<string>String XOR…</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>afterInput</string>
+	<key>uuid</key>
+	<string>5EB444AB-81FE-42FC-9411-5C774A67C663</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

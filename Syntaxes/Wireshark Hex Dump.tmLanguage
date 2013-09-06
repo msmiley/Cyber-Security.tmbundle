@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>dump</string>
+	</array>
+	<key>name</key>
+	<string>Wireshark Hex Dump</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>#request</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#response</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#notes</string>
+		</dict>
+	</array>
+	<key>repository</key>
+	<dict>
+		<key>notes</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(^|\G)([ ]{8}|\t)</string>
+					<key>name</key>
+					<string>markup.changed.wireshark</string>
+					<key>while</key>
+					<string>(^|\G)([ ]{8}|\t)</string>
+				</dict>
+			</array>
+		</dict>
+		<key>request</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(^|\G)\S</string>
+					<key>name</key>
+					<string>markup.deleted.wireshark</string>
+					<key>while</key>
+					<string>(^|\G)\S</string>
+				</dict>
+			</array>
+		</dict>
+		<key>response</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(^|\G)([ ]{4}|\t)\S</string>
+					<key>name</key>
+					<string>markup.inserted.wireshark</string>
+					<key>while</key>
+					<string>(^|\G)([ ]{4}|\t)\S</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>scopeName</key>
+	<string>hex.wireshark</string>
+	<key>uuid</key>
+	<string>FFD9411E-148D-45AA-91D7-98C200073779</string>
+</dict>
+</plist>
