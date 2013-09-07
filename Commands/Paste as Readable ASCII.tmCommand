@@ -10,7 +10,7 @@
 $LOAD_PATH.unshift(ENV['TM_BUNDLE_SUPPORT'])
 require 'string_tools'
 
-print %x{ /usr/bin/pbpaste }.extract_to_ascii
+print %x{ /usr/bin/pbpaste }.extract_to_readable
 </string>
 	<key>input</key>
 	<string>none</string>
