@@ -17,7 +17,7 @@ keystr = TextMate::UI.request_string(:title =&gt; 'XOR Char', :prompt =&gt; 'Ent
 
 if keystr != nil
   key = keystr.to_i(16)
-  print "\n" + XORTools.singleByteXORWithAry(key, STDIN.read).to_hex
+  print "\n" + XORTools.singleByteXORWithAry(key, STDIN.read.split.join.scan(/../).map {|x| x.hex}).to_hex
 end</string>
 	<key>input</key>
 	<string>selection</string>
