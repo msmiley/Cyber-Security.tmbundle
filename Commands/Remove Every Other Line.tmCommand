@@ -14,6 +14,8 @@ sed -n 'p;g;n;'
 	<string>selection</string>
 	<key>inputFormat</key>
 	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@W</string>
 	<key>name</key>
 	<string>Remove Every Other Line</string>
 	<key>outputCaret</key>
