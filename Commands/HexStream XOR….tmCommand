@@ -20,7 +20,7 @@ if keystr != nil
   print "\n" + XORTools.singleByteXORWithAry(key, STDIN.read.split.join.scan(/../).map {|x| x.hex}).to_hex
 end</string>
 	<key>input</key>
-	<string>selection</string>
+	<string>line</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
