@@ -9,16 +9,25 @@
 
 require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
 
-lenstr = TextMate::UI.request_string(:title =&gt; 'Paste With Delimiter…', :prompt =&gt; 'Number of chars per group :comma: delimiter', :button1 =&gt; 'OK', :button2 =&gt; 'Cancel', :default =&gt; "2,,")
+str = TextMate::UI.request_string(:title =&gt; 'Paste With Delimiter…', :prompt =&gt; 'Number of chars per group followed by delimiter', :button1 =&gt; 'OK', :button2 =&gt; 'Cancel', :default =&gt; "2 ")
 
-if lenstr != nil
-  print lenstr
+if str != nil
+  ## Ruby &gt; 1.9.3 code:
+  ## grouping = str[/(?&lt;grouping&gt;[0-9]+)(?&lt;delimiter&gt;[^0-9]+)/, "grouping"]
+  ## delimiter = str[/(?&lt;grouping&gt;[0-9]+)(?&lt;delimiter&gt;[^0-9]+)/, "delimiter"]
+
+  grouping = str.slice(/([0-9]+)([^0-9]+)/, 1).to_i
+  delimiter = str.slice(/([0-9]+)([^0-9]+)/, 2)
+
+  print %x{ /usr/bin/pbpaste }.scan(/#{'.'*grouping}/).join(delimiter)
 end
 </string>
 	<key>input</key>
 	<string>none</string>
 	<key>inputFormat</key>
 	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@V</string>
 	<key>name</key>
 	<string>Paste With Delimiter…</string>
 	<key>outputCaret</key>
@@ -26,7 +35,7 @@ end
 	<key>outputFormat</key>
 	<string>text</string>
 	<key>outputLocation</key>
-	<string>replaceInput</string>
+	<string>atCaret</string>
 	<key>uuid</key>
 	<string>2620CA56-EC23-4C8E-8101-38282220BA5C</string>
 	<key>version</key>
