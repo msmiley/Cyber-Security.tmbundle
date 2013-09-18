@@ -11,23 +11,22 @@ $LOAD_PATH.unshift(ENV['TM_BUNDLE_SUPPORT'])
 require 'hash_tools'
 require 'string_tools'
 
-
-print HashTools.hashWithString("MD5", %x{ /usr/bin/pbpaste }.extract_to_string).to_hex_stream
+print "\n" + HashTools.hashWithString("SHA512", STDIN.read).to_hex_stream
 </string>
 	<key>input</key>
-	<string>none</string>
+	<string>line</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>name</key>
-	<string>Paste MD5</string>
+	<string>SHA-512 of Line / Selection</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>
 	<string>text</string>
 	<key>outputLocation</key>
-	<string>atCaret</string>
+	<string>afterInput</string>
 	<key>uuid</key>
-	<string>C7D46BFB-8830-4485-9B2A-C500C974D132</string>
+	<string>3D420E6A-8BB2-41C1-AA22-DEBEAF8005A7</string>
 	<key>version</key>
 	<integer>2</integer>
 </dict>
