@@ -14,7 +14,7 @@ lenstr = TextMate::UI.request_string(:title =&gt; 'Random Bytes String', :prompt
 
 if lenstr != nil
   len = lenstr.to_i
-  print SecureRandom.random_bytes(len)
+  print SecureRandom.random_bytes(len).bytes.map { |x| "\\x%02X" % x }.join
 end
 </string>
 	<key>input</key>
