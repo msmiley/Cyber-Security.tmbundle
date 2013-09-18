@@ -9,7 +9,7 @@
 
 require 'base64'
 
-print "\n" + Base64.urlsafe_decode64(STDIN.read)
+print "\n" + Base64.urlsafe_encode64(STDIN.read)
 </string>
 	<key>input</key>
 	<string>line</string>
@@ -18,7 +18,7 @@ print "\n" + Base64.urlsafe_decode64(STDIN.read)
 	<key>keyEquivalent</key>
 	<string>@D</string>
 	<key>name</key>
-	<string>URL-Safe Base64 Decode</string>
+	<string>URL-Safe Base64 Encode</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>
@@ -26,7 +26,7 @@ print "\n" + Base64.urlsafe_decode64(STDIN.read)
 	<key>outputLocation</key>
 	<string>afterInput</string>
 	<key>uuid</key>
-	<string>5034A709-0173-4D3E-83C0-AA654FEE89F0</string>
+	<string>14E1EE94-D443-4B5A-A73A-28A424A11F45</string>
 	<key>version</key>
 	<integer>2</integer>
 </dict>

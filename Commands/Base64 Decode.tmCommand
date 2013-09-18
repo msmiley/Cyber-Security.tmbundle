@@ -9,13 +9,10 @@
 
 require 'base64'
 
-$LOAD_PATH.unshift(ENV['TM_BUNDLE_SUPPORT'])
-require 'string_tools'
-
-print "\n" + Base64.decode64(STDIN.read).to_hexed
+print "\n" + Base64.decode64(STDIN.read)
 </string>
 	<key>input</key>
-	<string>selection</string>
+	<string>line</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
