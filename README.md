@@ -1,6 +1,6 @@
-# Hex Tools TextMate bundle
+# Hex Tools TextMate 2 bundle
 
-A TextMate 2 bundle with Commands, Syntaxes, and Snippets tailored for working with hex data in the context of a text editor.
+A TextMate 2 bundle with Commands, Syntaxes, and Snippets tailored for working with hex data in the context of the best text editor out there, TextMate 2.
 
 ## Caveats
 
