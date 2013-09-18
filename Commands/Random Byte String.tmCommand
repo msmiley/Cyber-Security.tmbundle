@@ -10,7 +10,7 @@
 require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
 require 'securerandom'
 
-lenstr = TextMate::UI.request_string(:title =&gt; 'Random Bytes String', :prompt =&gt; 'Number of random bytes:', :button1 =&gt; 'OK', :button2 =&gt; 'Cancel')
+lenstr = TextMate::UI.request_string(:title =&gt; 'Random Byte String', :prompt =&gt; 'Number of random bytes:', :button1 =&gt; 'OK', :button2 =&gt; 'Cancel')
 
 if lenstr != nil
   len = lenstr.to_i
