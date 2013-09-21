@@ -34,7 +34,7 @@ print tag + LzhWrapper.encode(str).to_hexed + tag
 	<key>outputFormat</key>
 	<string>text</string>
 	<key>outputLocation</key>
-	<string>replaceInput</string>
+	<string>newWindow</string>
 	<key>uuid</key>
 	<string>5A73C8BD-4CE4-433F-BEDA-4086B895B21D</string>
 	<key>version</key>
