@@ -3,8 +3,7 @@
 # StringTools contains methods which provide additional methods for working with Strings.
 module StringTools
     
-  # Regex which matches commonly used delimiters
-  DELIMREGEX = /[.,:;\-\s](?:\s*)/n
+  HEXDUMP1 = /[0-9]{4,8}  (?:[A-Fa-f0-9]{2} ){8} (?:[A-Fa-f0-9]{2} ){8}[ -~]{8} [ -~]{8}(?:$|\n)/n
   # Regex which matches 2 character hex bytes with some form of delimiting
   # Uses negative lookahead which is only supported in Ruby > 1.9
   HEXBYTEREGEX = /(?<=^|[,:\s])[A-Fa-f0-9]{2}(?=[,:\s]|$)/n
@@ -15,7 +14,7 @@ module StringTools
   # Regex to find delimited 2-digit integers
   DECINTPAIRREGEX = /(?<=^|[.,\s])[0-9]{2}(?=$|[.,\s])/n
   # Regex to find ASCII columns in strings copied from Hex + ASCII (hex editor-like) views
-  ASCIICOLUMNS = /(?<= |  )[ -~]{8} {1,2}[ -~]{8}($|\n)/n
+  ASCIICOLUMNS = /(?<= |  )[ -~]{8} {1,2}[ -~]{8}\n[0-9]{4,8}/n
   
   # Smart string extraction.
   # Looks for 4 different types of data:
