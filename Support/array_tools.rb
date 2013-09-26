@@ -2,6 +2,23 @@
 
 module ArrayTools
 
+  def sum
+    inject(0) { |accum, i| accum + i }
+  end
+
+  def mean
+    sum / length.to_f
+  end
+
+  def variance
+    sum = inject(0) { |accum, i| accum + (i - mean) ** 2 }
+    sum / (length - 1).to_f
+  end
+
+  def std_dev
+    return Math.sqrt(variance)
+  end
+    
   def to_hex(delim='')
     self.map { |x| "%02X" % x }.join(delim)
   end
