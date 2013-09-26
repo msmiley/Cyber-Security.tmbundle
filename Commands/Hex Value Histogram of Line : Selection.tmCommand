@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(ENV['TM_BUNDLE_SUPPORT'])
+require 'string_tools'
+require 'array_tools'
+require 'stat_tools'
+
+input = STDIN.read.extract_ary
+
+x = StatTools.new(input)
+
+# get scaling factor for 60 cols of ASCII dots
+# max value will be drawn using all 60 cols
+max = x.histogram.max
+if max &gt; 0
+  factor = 60.0 / max
+else
+  factor = 1
+end
+
+# draw histogram
+output = "Length = %d\n" % x.length
+output += "Sum = %d\n" % x.sum
+output += "Std Dev = %f\n" % x.std_dev
+output += "Mean = %f\n" % x.mean
+output += "Var = %f\n" % x.variance
+output += "Entropy = %f\n" % x.entropy
+for i in (0..255)
+  val = x.histogram[i]
+  output += "0x%02X %5d ." % [i, val]
+  output += "."*(val*factor)
+  output += "\n"
+end
+
+print output</string>
+	<key>input</key>
+	<string>line</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>~@c</string>
+	<key>name</key>
+	<string>Hex Value Histogram of Line / Selection</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>uuid</key>
+	<string>0C323363-39BB-470C-89E3-33E1DFBF91F0</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

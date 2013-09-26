@@ -1,27 +1,48 @@
 #!/usr/bin/env ruby
 
 
-module StatTools
+class StatTools
+  attr_reader :data, :length, :sum, :mean, :variance, :std_dev, :histogram
   
-  def self.entropyWithData(data)
-    freqList = [0] * 256
-    
+  def initialize(data)
     if data.class == String
       data = data.bytes
     end
-    
-    data.each do |b|
-      freqList[b] += 1
-    end
-    
+    @data = data
+    @length = @data.length
+    @sum = @data.inject(0) { |accum, i| accum + i }
+    @mean = @sum/@length.to_f
+    @varsum = @data.inject(0) { |accum, i| accum + (i - @mean) ** 2 }
+    @variance = @varsum / (@length - 1).to_f
+    @std_dev = Math.sqrt(@variance)
+    @histogram = self.byte_histogram(@data)
+    return true
+  end
+  
+  def inspect
+    "data with length = #{@length}"
+  end
+  
+  def entropy    
     ent = 0.0
-    freqList.each do |f|
+    @histogram.each do |f|
       if f > 0
-        freq = f.to_f / data.length
+        freq = f.to_f / @data.length
         ent = ent + freq * (Math.log(freq)/Math.log(2))
       end
     end
     return -ent
+  end
+  
+  def byte_histogram(data)
+    if data.class == String
+      data = data.bytes
+    end
+    hist = [0]*256
+    data.each do |e|
+      hist[e] += 1
+    end
+    return hist
   end
   
   
