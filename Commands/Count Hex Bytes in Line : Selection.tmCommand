@@ -19,7 +19,7 @@ print "#{STDIN.read.extract_ary(true).length} bytes"
 	<key>keyEquivalent</key>
 	<string>~@c</string>
 	<key>name</key>
-	<string>Count Hex Bytes</string>
+	<string>Count Hex Bytes in Line / Selection</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>
