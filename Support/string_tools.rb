@@ -6,7 +6,7 @@ module StringTools
   HEXDUMP1 = /[0-9]{4,8}  (?:[A-Fa-f0-9]{2} ){8} (?:[A-Fa-f0-9]{2} ){8}[ -~]{8} [ -~]{8}(?:$|\n)/n
   # Regex which matches 2 character hex bytes with some form of delimiting
   # Uses negative lookahead which is only supported in Ruby > 1.9
-  HEXBYTEREGEX = /(?<=^|[,:\s])[A-Fa-f0-9]{2}(?=[,:\s]|$)/n
+  HEXBYTEREGEX = /(?<=^|[,:\s]|\\x)[A-Fa-f0-9]{2}(?=[,:\s]|\\x|$)/n
   # Regex matches hex streams (using Wireshark name and convention of continuous hex characters with no delimiter)
   HEXSTREAMREGEX = /^[A-Fa-f0-9]+$/n
   # Regex to find delimited integer values of any length
