@@ -13,13 +13,13 @@ require 'string_tools'
 print STDIN.read.stripall
 </string>
 	<key>input</key>
-	<string>selection</string>
+	<string>line</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>@W</string>
 	<key>name</key>
-	<string>Remove Whitespace</string>
+	<string>Remove Whitespace from Line / Selection</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>
