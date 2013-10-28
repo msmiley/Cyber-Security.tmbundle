@@ -7,7 +7,7 @@
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
 
-print "#{STDIN.read.length} chars"
+print "#{STDIN.read.split.join.length} chars"
 </string>
 	<key>input</key>
 	<string>line</string>
