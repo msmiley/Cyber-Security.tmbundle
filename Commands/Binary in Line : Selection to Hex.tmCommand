@@ -13,9 +13,9 @@ print "\n" + STDIN.read.scan(/..../).map { |x| "%X" % x.to_i(2) }.join</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>@D</string>
+	<string>~@c</string>
 	<key>name</key>
-	<string>Binary Stream to Hex</string>
+	<string>Binary in Line / Selection to Hex</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>

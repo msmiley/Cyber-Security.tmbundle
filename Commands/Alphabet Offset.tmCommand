@@ -19,7 +19,7 @@ end</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>@W</string>
+	<string>@D</string>
 	<key>name</key>
 	<string>Alphabet Offset…</string>
 	<key>outputCaret</key>
