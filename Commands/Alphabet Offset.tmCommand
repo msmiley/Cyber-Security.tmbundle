@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU
+
+require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
+
+offset = TextMate::UI.request_string(:title =&gt; 'Alphabet Offset', :prompt =&gt; 'Enter alphabet offset:', :button1 =&gt; 'OK', :button2 =&gt; 'Cancel', :default =&gt; "1")
+
+if offset != ""
+  print STDIN.read.bytes.map { |x| x+offset.to_i }.pack("C*")
+end</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@W</string>
+	<key>name</key>
+	<string>Alphabet Offset…</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>atCaret</string>
+	<key>uuid</key>
+	<string>0A506955-3C9F-42F7-80A2-9F3C95DB7ABC</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
