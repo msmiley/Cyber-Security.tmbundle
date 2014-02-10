@@ -1,6 +1,6 @@
-# Hex Tools TextMate 2 bundle
+# Cyber Security Tools TextMate 2 bundle
 
-A TextMate 2 bundle with Commands, Syntaxes, and Snippets tailored for working with hex data in the context of the best text editor out there, TextMate 2.
+A TextMate 2 bundle with Commands, Syntaxes, and Snippets tailored toward working with data in a cyber security context.
 
 ## Caveats
 
