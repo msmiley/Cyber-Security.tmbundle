@@ -1,114 +1,150 @@
-{	"contactEmailRot13" = "fzvyrqnjtt@zr.pbz";
-	contactName = "Smiledawgg";
-	description = "Tools and utilities for working with hex data\n";
-	mainMenu = {
-		items = (
-            "20B793EE-A350-48D3-87C3-1DECA281AB8B",
-            "------------------------------------",
-            "5A3E977F-E4D0-42E0-929C-35307E690620",
-            "------------------------------------",
-            "9F2A76A6-EAC7-43ED-B8EB-1F6DF8CA23D2",
-            "9418E9E9-25B6-48C2-9D87-780F65E888AC",
-            "5B6416B8-9F72-4042-BE13-7AE13F909BAD",
-            "5197E704-B4BA-4EE6-9CD2-7EAF52006B10",
-            "06A77413-1219-4B6A-B2DE-28914B8AC0D5",
-            "8625036A-5DAA-4A78-A733-0D1974D3E0EF",
-            "4735A8E1-02B1-4AFB-BBEF-92591C267200",
-            "2620CA56-EC23-4C8E-8101-38282220BA5C",
-			"------------------------------------",
-            "1FE7ACA7-A4CC-4517-B894-36C7CF76E074",
-            "F9E6CE2C-0217-4DAC-A26E-441190DB20DA",
-            "CC8527D7-E98F-41DE-A1D3-24471B3B53D5",
-            "0C323363-39BB-470C-89E3-33E1DFBF91F0",
-            "------------------------------------",
-			"FE3442D3-23FC-456C-AD93-26AF9FA8FEF7",
-            "427566A3-2ECD-499A-A496-CC4B1C095EB5",
-			"A982BF9D-ACB8-4299-8983-4AEB16CF85CA",
-			"5397FC71-EF05-4BAB-BF35-28122504CE23",
-            "86CD7E02-AA45-4CE0-8493-2F84007E0ACF",
-            "C158BD93-4E5C-4852-B728-A277C3313204",
-            "DEF4EB74-9048-49C3-9864-4930A78CA6AE",
-			"------------------------------------"
-		);
-		submenus = {
-			"FE3442D3-23FC-456C-AD93-26AF9FA8FEF7" = {
-				items = (
-					"5EB444AB-81FE-42FC-9411-5C774A67C663",
-					"9DD01BCF-57B2-46CE-B441-ADC5DAB05128",
-                    "------------------------------------",
-                    "0FA57D75-A6EF-477A-B49F-46C0790AFDDB",
-                    "340FCFED-A669-4A9C-A3C8-1F0B0ECE8B61",
-                    "------------------------------------",
-                    "5034A709-0173-4D3E-83C0-AA654FEE89F0",
-                    "14E1EE94-D443-4B5A-A73A-28A424A11F45",
-                    "------------------------------------",
-                    "3D51922B-0C44-4BE0-88D1-C780E635896A"
-				);
-				name = "Coding";
-			};
-            "427566A3-2ECD-499A-A496-CC4B1C095EB5" = {
-                items = (
-					"33023545-A76B-482E-A2CE-179A4917215B",
-                    "5A73C8BD-4CE4-433F-BEDA-4086B895B21D",
-                    "------------------------------------",
-                    "1186C880-6E4B-40D0-A97C-CFCC8933F1FB",
-                    "F7807486-84E5-4D14-85C1-920F9FA1F7F5",
-                    "------------------------------------",
-                    "B77CF855-89C3-44D8-8895-6796101B03BD",
-                    "E777F1F9-FE7A-416D-B6F2-0DEAFF71E5B4"
-                );
-                name = "Compression";
-            };
-			"A982BF9D-ACB8-4299-8983-4AEB16CF85CA" = {
-				items = (
-					"813E1051-73C9-4183-9058-9319F9788DE6",
-					"C15B8886-F996-4E64-A19B-F79BFA3CFCD5",
-					"421A61AF-72DB-4F2D-B2E9-49220817A4B7",
-                    "------------------------------------",
-                    "2492B672-F3F3-4F4C-9465-B888E361494B"
-				);
-				name = "Text";
-			};
-			"5397FC71-EF05-4BAB-BF35-28122504CE23" = {
-				items = (
-					"C8D6ED17-AEAD-4A4A-8290-317FC7177B04",
-					"04A103E6-6A24-4CCE-84B1-444BEEE386D3",
-					"D92DBCB3-2B10-4AAC-8DFE-D8FCA9421A6D",
-                    "BE0297D4-9974-4358-9C8C-45DE6DE9F1F7",
-                    "583F6D4F-7C99-407F-8F20-413ED56942AC",
-                    "------------------------------------",
-				);
-				name = "OpenSSL";
-			};
-            "86CD7E02-AA45-4CE0-8493-2F84007E0ACF" = {
-                items = (
-                    "C09FF9D4-2AD0-4D6E-87B1-90F71922C0A6",
-                    "9CB70F4C-07CB-44E6-9979-9F1946321525",
-                    "68FDD98B-72AE-4968-BCED-3DAA2686F164",
-                    "4ED76649-E5CD-4852-87B2-1B240EA8D0A3",
-                    "14155F28-638E-4790-8F51-EB0DADCD727F",
-                    "21409B4F-C35C-4428-BF36-9E74A949CCC7",
-                    "5C95655A-0D97-4CE3-852B-A6B01581DB0E",
-                    "7CBFB377-6B4B-4A14-9D28-8996290C0F1E",
-                    "3D420E6A-8BB2-41C1-AA22-DEBEAF8005A7"
-                );
-                name = "Hashes";
-            };
-            "C158BD93-4E5C-4852-B728-A277C3313204" = {
-                items = (
-                    "2D1A4F10-9F56-4A69-8C3B-B4278A857C60"
-                );
-                name = "Networking";
-            };
-            "DEF4EB74-9048-49C3-9864-4930A78CA6AE" = {
-                items = (
-                    "E304BC51-6876-4AB9-895C-45AB76FBFC02",
-                    "745BEEF6-E096-4EAE-9613-79122A84D817",
-                );
-                name = "Random";
-            };
-		};
-	};
-	name = "Hex";
-	uuid = "03448D41-20C5-40D9-BF7C-3B372E9E3338";
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>fzvyrqnjtt@zr.pbz</string>
+	<key>contactName</key>
+	<string>Smiledawgg</string>
+	<key>description</key>
+	<string>Tools and utilities for working with data in a Cyber Security context
+</string>
+	<key>mainMenu</key>
+	<dict>
+		<key>items</key>
+		<array>
+			<string>20B793EE-A350-48D3-87C3-1DECA281AB8B</string>
+			<string>------------------------------------</string>
+			<string>5A3E977F-E4D0-42E0-929C-35307E690620</string>
+			<string>------------------------------------</string>
+			<string>9F2A76A6-EAC7-43ED-B8EB-1F6DF8CA23D2</string>
+			<string>9418E9E9-25B6-48C2-9D87-780F65E888AC</string>
+			<string>5B6416B8-9F72-4042-BE13-7AE13F909BAD</string>
+			<string>5197E704-B4BA-4EE6-9CD2-7EAF52006B10</string>
+			<string>06A77413-1219-4B6A-B2DE-28914B8AC0D5</string>
+			<string>8625036A-5DAA-4A78-A733-0D1974D3E0EF</string>
+			<string>4735A8E1-02B1-4AFB-BBEF-92591C267200</string>
+			<string>2620CA56-EC23-4C8E-8101-38282220BA5C</string>
+			<string>------------------------------------</string>
+			<string>1FE7ACA7-A4CC-4517-B894-36C7CF76E074</string>
+			<string>F9E6CE2C-0217-4DAC-A26E-441190DB20DA</string>
+			<string>CC8527D7-E98F-41DE-A1D3-24471B3B53D5</string>
+			<string>0C323363-39BB-470C-89E3-33E1DFBF91F0</string>
+			<string>------------------------------------</string>
+			<string>FE3442D3-23FC-456C-AD93-26AF9FA8FEF7</string>
+			<string>427566A3-2ECD-499A-A496-CC4B1C095EB5</string>
+			<string>A982BF9D-ACB8-4299-8983-4AEB16CF85CA</string>
+			<string>5397FC71-EF05-4BAB-BF35-28122504CE23</string>
+			<string>86CD7E02-AA45-4CE0-8493-2F84007E0ACF</string>
+			<string>C158BD93-4E5C-4852-B728-A277C3313204</string>
+			<string>DEF4EB74-9048-49C3-9864-4930A78CA6AE</string>
+			<string>------------------------------------</string>
+		</array>
+		<key>submenus</key>
+		<dict>
+			<key>427566A3-2ECD-499A-A496-CC4B1C095EB5</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>33023545-A76B-482E-A2CE-179A4917215B</string>
+					<string>5A73C8BD-4CE4-433F-BEDA-4086B895B21D</string>
+					<string>------------------------------------</string>
+					<string>1186C880-6E4B-40D0-A97C-CFCC8933F1FB</string>
+					<string>F7807486-84E5-4D14-85C1-920F9FA1F7F5</string>
+					<string>------------------------------------</string>
+					<string>B77CF855-89C3-44D8-8895-6796101B03BD</string>
+					<string>E777F1F9-FE7A-416D-B6F2-0DEAFF71E5B4</string>
+				</array>
+				<key>name</key>
+				<string>Compression</string>
+			</dict>
+			<key>5397FC71-EF05-4BAB-BF35-28122504CE23</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>C8D6ED17-AEAD-4A4A-8290-317FC7177B04</string>
+					<string>04A103E6-6A24-4CCE-84B1-444BEEE386D3</string>
+					<string>D92DBCB3-2B10-4AAC-8DFE-D8FCA9421A6D</string>
+					<string>BE0297D4-9974-4358-9C8C-45DE6DE9F1F7</string>
+					<string>583F6D4F-7C99-407F-8F20-413ED56942AC</string>
+					<string>------------------------------------</string>
+				</array>
+				<key>name</key>
+				<string>OpenSSL</string>
+			</dict>
+			<key>86CD7E02-AA45-4CE0-8493-2F84007E0ACF</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>C09FF9D4-2AD0-4D6E-87B1-90F71922C0A6</string>
+					<string>9CB70F4C-07CB-44E6-9979-9F1946321525</string>
+					<string>68FDD98B-72AE-4968-BCED-3DAA2686F164</string>
+					<string>4ED76649-E5CD-4852-87B2-1B240EA8D0A3</string>
+					<string>14155F28-638E-4790-8F51-EB0DADCD727F</string>
+					<string>21409B4F-C35C-4428-BF36-9E74A949CCC7</string>
+					<string>5C95655A-0D97-4CE3-852B-A6B01581DB0E</string>
+					<string>7CBFB377-6B4B-4A14-9D28-8996290C0F1E</string>
+					<string>3D420E6A-8BB2-41C1-AA22-DEBEAF8005A7</string>
+				</array>
+				<key>name</key>
+				<string>Hashes</string>
+			</dict>
+			<key>A982BF9D-ACB8-4299-8983-4AEB16CF85CA</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>813E1051-73C9-4183-9058-9319F9788DE6</string>
+					<string>C15B8886-F996-4E64-A19B-F79BFA3CFCD5</string>
+					<string>421A61AF-72DB-4F2D-B2E9-49220817A4B7</string>
+					<string>------------------------------------</string>
+					<string>2492B672-F3F3-4F4C-9465-B888E361494B</string>
+					<string>36EC49AE-F9A3-4A3A-B39E-C7FDE55D38F3</string>
+				</array>
+				<key>name</key>
+				<string>Text</string>
+			</dict>
+			<key>C158BD93-4E5C-4852-B728-A277C3313204</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>2D1A4F10-9F56-4A69-8C3B-B4278A857C60</string>
+				</array>
+				<key>name</key>
+				<string>Networking</string>
+			</dict>
+			<key>DEF4EB74-9048-49C3-9864-4930A78CA6AE</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>E304BC51-6876-4AB9-895C-45AB76FBFC02</string>
+					<string>745BEEF6-E096-4EAE-9613-79122A84D817</string>
+				</array>
+				<key>name</key>
+				<string>Random</string>
+			</dict>
+			<key>FE3442D3-23FC-456C-AD93-26AF9FA8FEF7</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>5EB444AB-81FE-42FC-9411-5C774A67C663</string>
+					<string>9DD01BCF-57B2-46CE-B441-ADC5DAB05128</string>
+					<string>------------------------------------</string>
+					<string>0FA57D75-A6EF-477A-B49F-46C0790AFDDB</string>
+					<string>340FCFED-A669-4A9C-A3C8-1F0B0ECE8B61</string>
+					<string>------------------------------------</string>
+					<string>5034A709-0173-4D3E-83C0-AA654FEE89F0</string>
+					<string>14E1EE94-D443-4B5A-A73A-28A424A11F45</string>
+					<string>------------------------------------</string>
+					<string>3D51922B-0C44-4BE0-88D1-C780E635896A</string>
+				</array>
+				<key>name</key>
+				<string>Coding</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>name</key>
+	<string>Cyber Security</string>
+	<key>uuid</key>
+	<string>03448D41-20C5-40D9-BF7C-3B372E9E3338</string>
+</dict>
+</plist>

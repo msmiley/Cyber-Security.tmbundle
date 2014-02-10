@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU
+
+require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
+
+str = TextMate::UI.request_string(:title =&gt; 'Insert Range…', :prompt =&gt; 'Maximum number:', :button1 =&gt; 'OK', :button2 =&gt; 'Cancel', :default =&gt; "10")
+
+if str != nil
+  num = str.to_i
+  num.times {|x| print x }
+end
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@W</string>
+	<key>name</key>
+	<string>Insert Range…</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>atCaret</string>
+	<key>uuid</key>
+	<string>36EC49AE-F9A3-4A3A-B39E-C7FDE55D38F3</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
