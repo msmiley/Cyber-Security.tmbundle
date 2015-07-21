@@ -34,7 +34,11 @@ output += "Var = %f\n" % x.variance
 output += "Entropy = %f\n" % x.entropy
 for i in (0..255)
   val = x.histogram[i]
-  output += "0x%02X %5d ." % [i, val]
+  if i &gt; 31
+    output += "0x%02X(%c) %5d ." % [i, i, val]
+  else
+    output += "0x%02X(.) %5d ." % [i, val]
+  end
   output += "."*(val*factor)
   output += "\n"
 end
