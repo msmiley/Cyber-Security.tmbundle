@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(ENV['TM_BUNDLE_SUPPORT'])
+require 'string_tools'
+
+print STDIN.read.gsub(/\n/, '')
+</string>
+	<key>name</key>
+	<string>Remove newlines from Line / Selection</string>
+	<key>uuid</key>
+	<string>2FC39D25-8DDB-44EF-B0DD-F4673BA127D5</string>
+</dict>
+</plist>
